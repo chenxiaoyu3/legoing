@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="horizontal" android:layout_width="match_parent"
+	android:layout_height="70dp"
+	android:descendantFocusability="blocksDescendants">
+	<FrameLayout android:layout_width="70dp"
+		android:layout_height="match_parent">
+		<ImageView android:id="@+id/imageView_listItemCatas"
+			android:src="@drawable/lego_default" android:layout_width="60dp"
+			android:layout_height="60dp" android:layout_gravity="center" />
+		<ProgressBar android:id="@+id/progressBar_listItemCatas_PicLoading"
+			android:layout_width="60dp" android:layout_height="60dp"
+			android:layout_gravity="center" />
+	</FrameLayout>
+	<LinearLayout android:orientation="vertical"
+		android:layout_width="100dp" android:layout_height="wrap_content">
+		<!-- id -->
+		<TextView android:id="@+id/TV_listItemCatas_ItemID"
+			android:text="0000" style="@style/style_lableValue" />
+		<!-- name -->
+		<TextView android:id="@+id/TV_listItemCatas_ItemName"
+			android:text="I'm Name" style="@style/Style_Black_TextView_labelValue" />
+		<!-- year -->
+		<TextView android:id="@+id/TV_listItemCatas_Year" style="@style/Style_Black_TextView_labelValue" />
+		<!-- catalog -->
+		<!-- <TableRow> <TextView android:id="@+id/TV_listItemCatas_Catalog" android:text="cata..." 
+			style="@style/style_lableValue" /> </TableRow> -->
+	</LinearLayout>
+	<FrameLayout android:layout_width="30dp"
+		android:layout_height="match_parent">
+		<TextView android:id="@+id/textView_listItemCatas_Quantity"
+			style="@style/Style_Black_TextView_labelValueWhite" android:text="100"
+			android:layout_gravity="center_vertical" />
+	</FrameLayout>
+	<LinearLayout android:layout_width="0dp"
+		android:layout_height="match_parent">
+		<TextView android:id="@+id/textView_listItemCatas_Color"
+			android:text=" " android:layout_width="20dp" android:layout_height="20dp"
+			android:background="@color/ghostwhite" android:layout_gravity="center_vertical" />
+	</LinearLayout>
+	
+	<RelativeLayout android:layout_width="match_parent"
+		android:layout_height="match_parent">
+		<CheckBox android:id="@+id/checkBox_listItemCatas"
+			android:layout_alignParentRight="true" android:layout_centerVertical="true"
+			android:layout_marginRight="10dp" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:visibility="visible"/>
+	</RelativeLayout>
+</LinearLayout>
+

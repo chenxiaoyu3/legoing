@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	
+	<style name="style_TextView_Title" parent="@android:style/Widget.TextView">
+        <!-- <item name="android:background">#ff00ffff</item>   -->
+        <item name="android:layout_width">wrap_content</item>  
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#9292ce</item>
+        <item name="android:textSize">24dp</item>
+        <item name="android:textStyle">bold</item> 
+    </style> 
+
+    <style name="style_label" parent="@android:style/Widget.TextView">
+        <!-- <item name="android:background">#ff00ffff</item>   -->
+        <item name="android:layout_width">wrap_content</item>  
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#d76f0b</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:textStyle">bold</item> 
+        <item name="android:layout_marginRight">10dp</item>
+    </style> 
+    
+    <style name="style_lableValue">
+   		<item name="android:layout_width">wrap_content</item>  
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+    <style name="style_editText" parent="@android:style/Widget.EditText">
+    	<item name="android:background">@drawable/back_edit_text_sel</item>
+    	<item name="android:paddingLeft">10dp</item>
+    	
+    </style>
+    
+    <style name="style_Spinner" parent="@android:style/Widget.Spinner">
+    	<item name="android:background">@drawable/back_spinner</item>
+    	<item name="android:paddingLeft">10dp</item>
+    </style>
+</resources>

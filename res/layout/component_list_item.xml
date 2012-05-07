@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/linearLayout_ComponentListItem" android:orientation="horizontal"
+	android:layout_width="match_parent" android:layout_height="match_parent">
+	<!--<FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content"> 
+		<ImageView android:id="@+id/imageView_ComponentListItem" android:src="@drawable/lego_default" 
+		android:layout_width="80dp" android:layout_height="80dp" android:padding="10dp"/> 
+		<ProgressBar android:id="@+id/progressBar_ComponentListItem_PicLoading" android:layout_width="70dp" 
+		android:layout_height="70dp" android:layout_gravity="center" /> </FrameLayout> -->
+
+	<!-- id -->
+	<TextView android:id="@+id/TV_ComponentListItem_ItemID"
+		android:text="0000" style="@style/Style_Black_TextView_labelValue"
+		android:layout_width="50dp" android:layout_marginLeft="10dp" />
+	<!-- name -->
+	<TextView android:id="@+id/TV_ComponentListItem_ItemName"
+		android:text="......" style="@style/Style_Black_TextView_labelValue"
+		android:layout_width="200dp" android:layout_marginLeft="10dp" />
+	<!-- year -->
+	<!-- <TableRow> <TextView android:id="@+id/TV_ComponentListItem_Year" style="@style/style_lableValue" 
+		/> </TableRow> -->
+	<!-- catalog -->
+	<!-- <TableRow> <TextView android:id="@+id/TV_ComponentListItem_Catalog" 
+		android:text="cata..." style="@style/style_lableValue" /> </TableRow> -->
+
+	<LinearLayout android:layout_height="wrap_content"
+		android:layout_width="wrap_content" android:layout_marginLeft="20dp">
+		<TextView android:id="@+id/textView_ComponentListItem_Quantitiy"
+			android:gravity="center_vertical" style="@style/Style_Black_TextView_labelValueWhite"
+			android:text="10" android:textStyle="bold" />
+	</LinearLayout>
+</LinearLayout>

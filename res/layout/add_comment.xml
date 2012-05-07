@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="200dp"
+	android:layout_height="200dp"
+	android:padding="15dp"
+	android:orientation="vertical">
+
+	<TextView
+		style="@style/Style_Black_TextView_label"
+		android:text="@string/addComment_rating" />
+
+	<RatingBar
+		android:id="@+id/ratingBar_addComment"
+		android:layout_width="wrap_content"
+		android:layout_height="40dp"
+		android:layout_gravity="center_horizontal"
+		android:progressDrawable="@drawable/rating_bar_list" />
+
+	<TextView
+		style="@style/Style_Black_TextView_label"
+		android:text="@string/addComment_desc" 
+		/>
+
+	<EditText
+		android:id="@+id/editText_addComment"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:hint="@string/addComment_descHit"
+		android:lines="3"
+		/>
+
+</LinearLayout>

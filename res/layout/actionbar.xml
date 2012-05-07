@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="50dp" >
+
+	<ImageView
+		android:id="@+id/imageView_actionBar_titleBack"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_alignParentTop="true"
+		android:scaleType="fitXY"
+		android:src="@drawable/title_back" 
+		/>
+	<TextView
+		android:id="@+id/textView_actionbar_account"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerVertical="true"
+		android:layout_alignParentRight="true"
+		android:layout_marginRight="8dp"
+		android:drawableLeft="@drawable/user"
+		android:drawablePadding="4dp"
+		android:gravity="center_vertical"
+		android:textColor="@color/gray"
+		android:background="@drawable/selector_image_button_bg_2"
+		android:clickable="true"
+		/>
+	<TextView
+		android:id="@+id/textView_actionBar_title"
+		style="@style/Style_Black_TextView_Title"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_toLeftOf="@id/textView_actionbar_account"
+		android:layout_alignParentLeft="true"
+		android:layout_centerVertical="true"
+		android:layout_marginLeft="10dp"
+		android:maxLines="2"
+		android:ellipsize="marquee"
+		/>
+	
+	<ImageView 
+		android:id="@+id/imageView_actionBar_title"
+		android:layout_width="wrap_content"
+		android:layout_height="match_parent"
+		android:layout_marginLeft="10dp"
+		android:adjustViewBounds="true"
+	/>
+
+
+		<!--  
+	<RelativeLayout
+		android:id="@+id/layout_actionBarAccount"
+		android:layout_width="wrap_content"
+		android:layout_height="match_parent"
+		android:layout_alignParentRight="true"
+		android:layout_marginRight="10dp"
+		 >
+
+		<LinearLayout 
+			android:id="@+id/layout_actionBar_account_userInfo"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_centerVertical="true">
+			<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:scaleType="fitCenter"
+				android:src="@drawable/user_offline" />
+			
+		</LinearLayout>
+		
+	</RelativeLayout>
+-->
+</RelativeLayout>

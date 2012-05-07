@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/textView_pageViewTitle"
+	style="@style/Style_Black_TextView_label"
+    android:layout_width="match_parent"
+    android:layout_height="38dp"
+    android:orientation="vertical" 
+    android:paddingLeft="6dp"
+    android:paddingRight="6dp"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp"
+    android:singleLine="true"
+    android:layout_weight="1.0"
+    android:gravity="center"
+    android:background="@drawable/pageview_bg"
+    android:layout_margin="0dp"
+    />
+    

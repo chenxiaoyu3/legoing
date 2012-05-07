@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="250dp"
+	android:layout_height="match_parent">
+	<LinearLayout android:orientation="horizontal"
+		android:layout_width="match_parent" android:layout_height="wrap_content">
+		<ImageView android:id="@+id/imageView_AddToMyLego_TitlePic"
+			android:layout_width="50dp" android:layout_height="50dp" android:src="@drawable/lego_1" />
+		<TextView style="@style/Style_Black_TextView_Title"
+			android:layout_height="wrap_content"
+			 android:text="@string/label_itemInfo_addMyLego_Title"
+			android:gravity="center_vertical" />
+	</LinearLayout>
+	<TableLayout 
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="10dp"
+		android:shrinkColumns="0"
+		android:stretchColumns="1">
+		<TableRow>
+			<TextView
+				style="@style/Style_Black_TextView_label" 
+				android:text="@string/label_addToMyLego_Quantity" />
+			<EditText android:id="@+id/editText_AddToMyLego_Quantity"
+				android:inputType="number"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:numeric="integer" android:text="1" />
+		</TableRow>
+		<TableRow 
+			android:id="@+id/layout_AddToMyLego_color"
+			android:visibility="gone">
+			<TextView
+				style="@style/Style_Black_TextView_label" 
+				android:text="@string/label_addToMyLego_Color" />
+			<EditText android:id="@+id/editText_AddToMyLego_Color"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:text="Default" android:editable="false" android:cursorVisible="false" />
+		</TableRow>
+	</TableLayout>
+	<LinearLayout android:orientation="horizontal"
+		android:layout_width="match_parent" android:layout_height="wrap_content">
+		<Button android:id="@+id/button_AddToMyLego_Yes"
+			android:text="@string/Confirm"
+			style="@style/Style_Black_StrechButton"
+			android:layout_weight="1"
+			 />
+		<Button
+			android:id="@+id/button_AddToMyLego_No"
+			android:text="@string/CANCLE"
+			style="@style/Style_Black_StrechButton"
+			android:layout_weight="1"
+			/>
+	</LinearLayout>
+</LinearLayout>

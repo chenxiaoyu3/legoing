@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:orientation="horizontal" >
+	<TableLayout 
+		android:layout_width="match_parent" android:layout_height="wrap_content"
+		android:shrinkColumns="2" android:stretchColumns="2">
+		<TableRow>
+			<ImageView android:id="@+id/imageView_findMissComponentListItem_color"
+				android:layout_width="8dp" android:layout_height="10dp"
+				android:layout_gravity="center_vertical"/>
+			<!-- id -->
+			<TextView android:id="@+id/textView_findMissComponentListItem_itemID"
+				android:text="0000-1" style="@style/Style_Black_TextView_labelValue"
+				android:layout_width="wrap_content" android:layout_marginLeft="8dp" 
+				/>
+			<!-- name -->
+			<TextView android:id="@+id/textView_findMissComponentListItem_ItemName"
+				android:text="name name name" style="@style/Style_Black_TextView_labelValue"
+				android:singleLine="true"
+				android:layout_width="wrap_content" android:layout_marginLeft="10dp" 
+				/>
+		
+			<TextView android:id="@+id/textView_findMissComponentListItem_quantitiyCompare"
+				android:gravity="center_vertical" style="@style/Style_Black_TextView_labelValueWhite"
+				android:layout_marginLeft="10dp" 
+				android:text="10/10" android:textStyle="bold" 
+				/>
+			<TextView android:id="@+id/textView_findMissComponentListItem_quantitiyMiss"
+				android:gravity="center_vertical" style="@style/Style_Black_TextView_labelValueWhite"
+				android:layout_marginLeft="10dp" 
+				android:text="10" android:textStyle="bold"
+				android:layout_marginRight="10dp"
+				/>
+		</TableRow>
+	</TableLayout>
+	
+
+</LinearLayout>

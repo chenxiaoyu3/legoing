@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<dimen name="tab_word_width">50dp</dimen>
+	<dimen name="tab_word_height">100dp</dimen>
+	<dimen name="popwin_width">280dp</dimen>
+</resources>
