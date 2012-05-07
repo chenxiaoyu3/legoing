@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="Style_Black_TextView_Title" parent="@android:style/Widget.TextView">
+		<!-- <item name="android:background">#ff00ffff</item> -->
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_marginLeft">8dp</item>
+		<item name="android:textColor">#ffffff</item>
+		<item name="android:textSize">20dp</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+
+	<style name="Style_Black_TextView_label" parent="@android:style/Widget.TextView">
+		<!-- <item name="android:background">#ff00ffff</item> -->
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:textColor">#ffffff</item>
+		<item name="android:textSize">18dp</item>
+		<item name="android:textStyle">bold</item>
+		<item name="android:layout_marginRight">10dp</item>
+		<item name="android:layout_marginLeft">10dp</item>
+	</style>
+	
+	<style name="Style_Black_TextView_label_l2" parent="@android:style/Widget.TextView"> -->
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:textColor">#ffffff</item>
+		<item name="android:textSize">15dp</item>
+		<item name="android:layout_marginRight">10dp</item>
+		<item name="android:layout_marginLeft">10dp</item>
+	</style>
+
+	<style name="Style_Black_TextView_labelValue" parent="@android:style/Widget.TextView">
+		<!-- <item name="android:background">#ff00ffff</item> -->
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+
+	</style>
+	<style name="Style_Black_TextView_labelValueWhite" parent="@android:style/Widget.TextView">
+		<item name="android:textColor">#ffffff</item>
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+
+	</style>
+	<style name="Style_Black_TextView_labelValueGreen" parent="@android:style/Widget.TextView">
+		<item name="android:textColor">#ADFF2F</item>
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+
+	</style>
+
+	<style name="Style_Black_TextView_labelValueRed" parent="@android:style/Widget.TextView">
+		<item name="android:textColor">#ec0000</item>
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+	</style>
+	
+	
+	<style name="Style_Black_TextView_valueThemeColor" parent="@android:style/Widget.TextView">
+		<item name="android:textColor">@color/color_theme</item>
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+	</style>
+	
+	<style name="Style_Black_editText" parent="@android:style/Widget.EditText">
+		<!-- <item name="android:background">@drawable/back_edit_text_sel</item> 
+			<item name="android:paddingLeft">10dp</item> -->
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+
+	</style>
+
+	<style name="Style_Black_Spinner" parent="@android:style/Widget.Spinner">
+		<!-- <item name="android:background">@drawable/back_spinner</item> <item 
+			name="android:paddingLeft">10dp</item> -->
+	</style>
+	<style name="Style_Black_Divider">
+		<item name="android:src">@color/color_theme</item>
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">3dp</item>
+		<item name="android:layout_marginRight">0dp</item>
+	</style>
+	<style name="Style_Black_ImageButton" parent="@android:style/Widget.ImageButton">
+		<item name="android:background">@drawable/selector_image_button_bg</item>
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+	</style>
+	<style name="Style_Black_StrechButton" parent="@android:style/Widget.Button">
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">wrap_content</item>
+	</style>
+</resources>

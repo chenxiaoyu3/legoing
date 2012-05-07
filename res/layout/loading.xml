@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:background="@drawable/back_main_loading">
+
+	<RelativeLayout android:id="@+id/Layout_Loading"
+		android:layout_width="fill_parent" android:layout_height="fill_parent"
+		android:background="@drawable/back_main_loading">
+		<ImageView android:src="@drawable/legoing_without_star"
+			android:id="@+id/ImageView_legoing" android:layout_width="150dp"
+			android:layout_height="120dp" android:scaleType="fitCenter"
+			android:layout_marginTop="55dp" android:layout_alignParentRight="true"
+			android:layout_marginRight="50dp"></ImageView>
+		<ImageView android:src="@drawable/star" android:id="@+id/ImageView_loadingStar"
+			android:layout_width="25dp" android:layout_height="25dp"
+			android:layout_alignRight="@id/ImageView_legoing"
+			android:layout_alignTop="@id/ImageView_legoing" android:scaleType="fitCenter"
+			android:layout_marginRight="40dp" android:layout_marginTop="10dp"></ImageView>
+		<TextView android:layout_alignParentBottom="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10dp"
+			android:layout_alignParentLeft="true" android:text="@string/copyright" />
+
+	</RelativeLayout>
+
+</FrameLayout>

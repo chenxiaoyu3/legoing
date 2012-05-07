@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 根节点布局 -->
+<com.Legoing.UserControls.UCtrl_AnimTabHost
+	xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/tabHost"
+	android:layout_width="fill_parent" android:layout_height="fill_parent">
+	<RelativeLayout android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:background="@drawable/main_back">
+
+		<TabWidget android:id="@android:id/tabs"
+			android:layout_width="fill_parent" android:layout_height="50dp"
+			android:layout_alignParentBottom="true" android:background="@drawable/tab_back" />
+		<com.Legoing.UserControls.ActionBar
+			android:id="@+id/actionBar_mainTab"
+			android:layout_width="match_parent" android:layout_height="wrap_content"/>
+	
+		<FrameLayout android:layout_width="fill_parent"
+			android:layout_height="match_parent" android:id="@android:id/tabcontent"
+			android:layout_above="@android:id/tabs" android:layout_below="@id/actionBar_mainTab">
+			<!-- 第一个Tab Home -->
+			<FrameLayout android:id="@+id/mainTab_Home"
+				android:layout_width="fill_parent" android:layout_height="fill_parent">
+				<com.Legoing.UserControls.Layout_Home
+					android:id="@+id/layout_Home" android:layout_width="fill_parent"
+					android:layout_height="fill_parent" />
+			</FrameLayout>
+
+			<!-- 第二个Tab Search -->
+			<FrameLayout android:id="@+id/mainTab_Search"
+				android:layout_width="fill_parent" android:layout_height="fill_parent">
+				<com.Legoing.UserControls.Layout_Search
+					android:id="@+id/layout_Search" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" />
+
+			</FrameLayout>
+			<!-- 第三个Tab My Legoing -->
+			<FrameLayout android:id="@+id/mainTab_User"
+				android:layout_width="fill_parent" android:layout_height="fill_parent">
+				<com.Legoing.UserControls.Layout_MyLegoing
+					android:id="@+id/layout_MyLegoing" android:layout_width="match_parent"
+					android:layout_height="match_parent" />
+
+			</FrameLayout>
+			<!-- 第四个Tab 对应的布局 -->
+			<FrameLayout android:id="@+id/mainTab_Test"
+				android:layout_width="fill_parent" android:layout_height="fill_parent">
+
+			</FrameLayout>
+			<!-- loading -->
+			<RelativeLayout android:id="@+id/layout_NetState"
+				android:layout_width="fill_parent" android:layout_height="fill_parent">
+			</RelativeLayout>
+		</FrameLayout>
+
+		<!-- <ImageView android:id="@+id/imageView_tabBack" android:layout_width="wrap_content" 
+			android:layout_height="70dp" android:scaleType="fitEnd" android:src="@drawable/bird" 
+			android:layout_marginRight="15dp" android:layout_alignRight="@android:id/tabcontent" 
+			android:layout_marginBottom="15dp" android:layout_above="@android:id/tabs" 
+			/> -->
+	</RelativeLayout>
+</com.Legoing.UserControls.UCtrl_AnimTabHost>

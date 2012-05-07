@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<declare-styleable name="Layout_TitleLevel_2">
+		<attr name="mTitleText" format="string" />
+		<attr name="mTitleText2" format="string" />
+	</declare-styleable>
+	
+	<declare-styleable name="ActionBar">
+		<attr name="titleText" format="string"/>
+	</declare-styleable>
+</resources>

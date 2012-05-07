@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!-- 软件界面的一些字符串 -->
+    <string name="hello">Hello World, LegoingActivity!</string>
+    <string name="app_name">Legoing</string>
+    <string name="copyright">Copyright @ ... ^_^</string>
+    <string name="search_title_Search">Search</string>
+    <string name="search_label_Type">Type</string>
+    <string name="search_label_Year">Year</string>
+    <string name="search_label_ItemNo">Item No.</string>
+    <string name="search_label_Name">Name</string>
+    
+    
+    
+    <string name="search_label_title_set">Set</string>
+    <string name="search_label_title_part">Part</string>
+    
+    <string name="login_label_UserName">User Name</string>
+    <string name="login_label_Psd">Password</string>
+    
+    <string name="actionbar_login">SIGN IN</string>
+    
+    <string name="label_itemInfo_Year">Year</string>
+    <string name="label_itemInfo_PartsNum">Parts</string>
+    <string name="label_itemInfo_Minifigs">Minifigs</string>
+    <string name="label_itemInfo_Price">Price</string>
+    <string name="label_itemInfo_Catalog">Catalog</string>
+    <string name="itemInfo_Detail">Detail</string>
+    <string name="itemInfo_Comment">Comment</string>
+    <string name="itemInfo_addCommentSuccess">Comment success.</string>
+    
+    <string name="label_addToMyLego_Quantity">Quantity</string>
+    <string name="label_addToMyLego_Color">Color</string>
+    
+    <string name="label_colorPicker">Legoing Color Picker</string>
+    
+    <string name="label_myLego_Selected">Selected</string>
+    <string name="label_myLego_loadSuccess">Success load</string>
+    <string name="label_myLego_allPartsCount">All count</string>
+    
+    
+    <string name="label_import_Title">Import from Websites</string>
+    <string name="website_peeron">www.peeron.com</string>
+    <string name="website_bricklink">www.bricklink.com</string>
+    
+    <string name="findMiss_title">Find Missing Parts</string>
+    <string name="findMiss_selected">Set(s) selected.</string>
+    
+    <string name="addComment_rating">Rating</string>
+    <string name="addComment_desc">Description</string>
+    <string name="addComment_descHit">Tell me something about it!</string>
+    
+    <string name="msg_netMode_None">No network available</string>
+    <string name="msg_netMode_Wifi">Wifi connected</string>
+    <string name="msg_netMode_Mobile">Mobile connected</string>
+    
+    <string name="msg_Error_ServerConnectFail">Check your network connection....</string>
+    <string name="msg_Error_ServerFail">Server Failed. T_T </string>
+    <string name="msg_Error_INNER">Inner Error......</string>
+    <string name="msg_Error_Unkown">Unkown code </string>
+    
+    <string name="msg_EnterUserNamePlease">Please enter the user name</string>
+    <string name="msg_EnterUserPsdPlease">Please enter the password</string>
+    <string name="msg_WrongUserNameOrPsd">Wrong user name or password, try again.</string>
+    <string name="msg_LoginFirstPlease">Please login first.</string>
+    <string name="mylego_register"><a href='http://legosys.sinaapp.com/request_register.php'>10s to Register!</a></string>
+    
+    <string name="msg_EnterQuantity">Please enter the quantity</string>
+    <string name="msg_EnterColor">Please enter the color</string>
+    <string name="msg_LogOff">Log off now?</string>
+    <string name="msg_Exit">Exit legoing?</string>
+    
+    <string name="msg_ThreadAbort">Thread Abort.</string>
+   
+    <string name="msg_ComponentsNotFound">Components detail not found.</string>
+    <string name="label_itemInfo_addMyLego_Title">Add to my Legoing</string>
+    <string name="Confirm">Confirm</string>
+    <string name="YES">Yes</string>
+    <string name="NO">No</string>
+    <string name="CANCLE">Cancel</string>
+    <string name="reset">Reset</string>
+    <string name="Successed">Success</string>
+    <string name="Failed">Fail</string>
+    <string name="Repeat">Repeat</string>
+    <string name="exit">Exit</string>
+    <string name="Set">Set</string>
+	<string name="Minifig">Minifig</string>
+	<string name="Part">Part</string>
+	<string name="Setting">Setting</string>
+	
+	<string name="Select">Select</string>
+	<string name="Desc">Funny!</string>
+	
+	<string name="alertMenu_FindMiss">What do I miss?</string>
+	<string name="menu_import">Import</string>
+	<string name="menu_qrcode">QRCode Scan</string>
+	<string name="menu_addToMyLego">Add My Lego</string>
+	<string name="menu_findMiss">Find Missing</string>
+	<string name="menu_addComment">Comment</string>
+	
+	<string name="multiSel_title">Select Sets</string>
+	<string name="setting_ignoreColor">Ignore Colors</string>
+ <!-- 内部常量 -->   
+    <string name="silde_tab_time">400</string>
+    
+  
+</resources>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical" >
+
+	<com.Legoing.UserControls.ActionBar android:id="@+id/actionBar_import" 
+		android:layout_width="match_parent" android:layout_height="wrap_content" />
+
+	<FrameLayout
+		android:layout_height="match_parent" android:layout_width="match_parent">
+	<LinearLayout  android:id="@+id/layout_import_login" 
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		android:visibility="visible" >
+		
+		<RadioGroup
+			android:id="@+id/radioGroup_import_Sites"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical" >
+	
+			<RadioButton
+				android:id="@+id/radioButton_import_peeron"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="5dp"
+				android:checked="true"
+				android:text="@string/website_peeron"
+				/>
+			<RadioButton
+				android:id="@+id/radioButton_import_bricklink"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="5dp"
+				android:text="@string/website_bricklink" 
+				android:enabled="false"
+				/>
+		</RadioGroup>
+		
+		<TableLayout android:layout_width="match_parent" android:layout_height="wrap_content" 
+			android:stretchColumns="1"
+			android:layout_marginTop="10dp">
+			<TableRow android:layout_height="wrap_content">
+				<TextView style="@style/Style_Black_TextView_label"
+					android:text="@string/login_label_UserName" />
+				<EditText android:id="@+id/editText_import_UName" style="@style/Style_Black_editText"
+					android:inputType="text"
+					android:text="chenxiaoyu3" />
+	
+			</TableRow>
+			<TableRow android:layout_height="wrap_content">
+				<TextView style="@style/Style_Black_TextView_label"
+					android:text="@string/login_label_Psd" />
+				<EditText android:id="@+id/editText_import_Psd"
+					android:inputType="textPassword" style="@style/Style_Black_editText"
+					android:text="chenxiaoyu3" />
+	
+			</TableRow>
+		</TableLayout>
+		
+		<LinearLayout 
+			android:layout_width="match_parent" android:layout_height="wrap_content"
+			android:layout_marginTop="10dp"
+			android:orientation="horizontal">
+			<Button android:id="@+id/button_import_confirm"
+				android:layout_width="match_parent" android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:layout_marginLeft="10dp" android:layout_marginRight="10dp"
+				android:text="@string/Confirm"/>
+			<Button android:id="@+id/button_import_reset"
+				android:layout_width="match_parent" android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:layout_marginLeft="10dp" android:layout_marginRight="10dp"
+				android:text="@string/reset"/>
+			
+		</LinearLayout>
+		<LinearLayout 
+			android:layout_width="match_parent" android:layout_height="match_parent">
+			<ProgressBar android:id="@+id/progressBar_import"
+				android:layout_gravity="left|bottom" android:layout_width="100dp"
+				android:layout_height="100dp" 
+				android:visibility="invisible"/>	
+		</LinearLayout>
+	</LinearLayout>
+	
+	<LinearLayout  android:id="@+id/layout_import_result" 
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical" 
+		android:visibility="invisible">
+		<TextView android:id="@+id/textView_importResult_website"
+			style="@style/Style_Black_TextView_label"/>
+		<TextView android:id="@+id/textView_importResult_name"
+			style="@style/Style_Black_TextView_labelValue"/>
+		<ImageView style="@style/Style_Black_Divider" android:contentDescription="@string/Desc"/>
+		<TableLayout 
+			android:layout_width="match_parent" android:layout_height="wrap_content">
+			<TableRow>
+				<TextView style="@style/Style_Black_TextView_label"
+					android:text="@string/Set" 
+					android:layout_column="1"/>
+				<TextView style="@style/Style_Black_TextView_label"
+					android:text="@string/Minifig" 
+					android:layout_column="2"/>
+				<TextView style="@style/Style_Black_TextView_label"
+					android:text="@string/Part" 
+					android:layout_column="3"/>
+			</TableRow>
+			<TableRow>
+				<TextView style="@style/Style_Black_TextView_label"
+					android:text="@string/Successed"/>
+				<TextView style="@style/Style_Black_TextView_labelValue"
+					android:id="@+id/textView_importResult_suc_S"
+					android:layout_gravity="center"
+					/>
+				<TextView style="@style/Style_Black_TextView_labelValue"
+					android:id="@+id/textView_importResult_suc_M"
+					android:layout_gravity="center"
+					/>
+				<TextView style="@style/Style_Black_TextView_labelValue"
+					android:id="@+id/textView_importResult_suc_P"
+					android:layout_gravity="center"
+					/>
+			</TableRow>
+			<TableRow>
+				<TextView style="@style/Style_Black_TextView_label"
+					android:text="@string/Failed"/>
+				<TextView style="@style/Style_Black_TextView_labelValue"
+					android:id="@+id/textView_importResult_fail_S"
+					android:layout_gravity="center"
+					/>
+				<TextView style="@style/Style_Black_TextView_labelValue"
+					android:id="@+id/textView_importResult_fail_M"
+					android:layout_gravity="center"
+					/>
+				<TextView style="@style/Style_Black_TextView_labelValue"
+					android:id="@+id/textView_importResult_fail_P"
+					android:layout_gravity="center"
+					/>
+			</TableRow>
+			<TableRow>
+				<TextView style="@style/Style_Black_TextView_label"
+					android:text="@string/Repeat"/>
+				<TextView style="@style/Style_Black_TextView_labelValue"
+					android:id="@+id/textView_importResult_repeat_S"
+					android:layout_gravity="center"
+					/>
+				<TextView style="@style/Style_Black_TextView_labelValue"
+					android:id="@+id/textView_importResult_repeat_M"
+					android:layout_gravity="center"
+					/>
+				<TextView style="@style/Style_Black_TextView_labelValue"
+					android:id="@+id/textView_importResult_repeat_P"
+					android:layout_gravity="center"
+					/>
+			</TableRow>
+
+		</TableLayout>
+		
+	</LinearLayout>
+	</FrameLayout>
+
+</LinearLayout>

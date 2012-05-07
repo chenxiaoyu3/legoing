@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="legoItem_types">
+		<item name="Any">Any</item>
+		<item name="Set">Set</item>
+		<item name="Minifig">Minifig</item>
+		<item name="Part">Part</item>
+	</string-array>
+
+	<string-array name="array_item_colors">
+		<item name="RESERVED">RESERVED</item>
+		<item>unknow</item>
+		<item>white</item>
+		<item>very light gray</item>
+		<item>very light bluish gray</item>
+		<item>light bluish gray</item>
+		<item>light gray</item>
+		<item>dark gray</item>
+		<item>dark bluish gray</item>
+		<item>black</item>
+		<item>dark red</item>
+		<item>red</item>
+		<item>rust</item>
+		<item>salmon</item>
+		<item>light salmon</item>
+		<item>sand red</item>
+		<item>reddish brown</item>
+		<item>brown</item>
+		<item>dark brown</item>
+		<item>dark tan</item>
+		<item>tan</item>
+		<item>light flesh</item>
+		<item>flesh</item>
+		<item>medium dark flesh</item>
+		<item>dark flesh</item>
+		<item>fabuland brown</item>
+		<item>earth orange</item>
+		<item>dark orange</item>
+		<item>orange</item>
+		<item>medium orange</item>
+		<item>bright light orange</item>
+		<item>light orange</item>
+		<item>very light orange</item>
+		<item>yellow</item>
+		<item>bright light Yellow</item>
+		<item>light yellow</item>
+		<item>light lime</item>
+		<item>yellowish green</item>
+		<item>medium lime</item>
+		<item>lime</item>
+		<item>olive green</item>
+		<item>dark green</item>
+		<item>green</item>
+		<item>bright green</item>
+		<item>medium green</item>
+		<item>light green</item>
+		<item>sand green</item>
+		<item>dark turquoise</item>
+		<item>light turquoise</item>
+		<item>aqua</item>
+		<item>light aqua</item>
+		<item>dark blue</item>
+		<item>blue</item>
+		<item>dark azure</item>
+		<item>medium azure</item>
+		<item>medium blue</item>
+		<item>maersk blue</item>
+		<item>bright light blue</item>
+		<item>light blue</item>
+		<item>sky blue</item>
+		<item>sand blue</item>
+		<item>blue-violet</item>
+		<item>dark blue-violet</item>
+		<item>violet</item>
+		<item>medium violet</item>
+		<item>light violet</item>
+		<item>dark purple</item>
+		<item>purple</item>
+		<item>light purple</item>
+		<item>medium lavender</item>
+		<item>lavender</item>
+		<item>sand purple</item>
+		<item>magenta</item>
+		<item>dark pink</item>
+		<item>medium dark pink</item>
+		<item>bright pink</item>
+		<item>pink</item>
+		<item>light pink</item>
+		<item>trans-clear</item>
+		<item>trans-black</item>
+		<item>trans-red</item>
+		<item>trans-neon orange</item>
+		<item>trans-orange</item>
+		<item>trans-neon yellow</item>
+		<item>trans-yellow</item>
+		<item>trans-neon green</item>
+		<item>trans-bright green</item>
+		<item>trans-green</item>
+		<item>trans-dark blue</item>
+		<item>trans-medium blue</item>
+		<item>trans-light blue</item>
+		<item>trans-very lt blue</item>
+		<item>trans-light purple</item>
+		<item>trans-purple</item>
+		<item>trans-dark pink</item>
+		<item>trans-pink</item>
+		<item>chrome gold</item>
+		<item>chrome silver</item>
+		<item>chrome antique brass</item>
+		<item>chrome black</item>
+		<item>chrome blue</item>
+		<item>chrome green</item>
+		<item>chrome pink</item>
+		<item>pearl white</item>
+		<item>pearl very light gray</item>
+		<item>pearl light gray</item>
+		<item>flat silver</item>
+		<item>pearl dark gray</item>
+		<item>metal blue</item>
+		<item>pearl light gold</item>
+		<item>pearl gold</item>
+		<item>flat dark gold</item>
+		<item>copper</item>
+		<item>metallic silver</item>
+		<item>metallic green</item>
+		<item>metallic gold</item>
+		<item>milky white</item>
+		<item>glow in dark opaque</item>
+		<item>glow in dark trans</item>
+		<item>glitter trans-clear</item>
+		<item>glitter trans-purple</item>
+		<item>glitter trans-dark pink</item>
+		<item>speckle black-silver</item>
+		<item>speckle black-gold</item>
+		<item>speckle black-copper</item>
+		<item>speckle dbgray-silver</item>
+		<item>mx white</item>
+		<item>mx light bluish gray</item>
+		<item>mx light gray</item>
+		<item>mx charcoal gray</item>
+		<item>mx tile gray</item>
+		<item>mx black</item>
+		<item>mx tile brown</item>
+		<item>mx terracotta</item>
+		<item>mx brown</item>
+		<item>mx buff</item>
+		<item>mx red</item>
+		<item>mx pink red</item>
+		<item>mx orange</item>
+		<item>mx light orange</item>
+		<item>mx light yellow</item>
+		<item>mx ochre yellow</item>
+		<item>mx lemon</item>
+		<item>mx pastel green</item>
+		<item>mx olive green</item>
+		<item>mx aqua green</item>
+		<item>mx teal blue</item>
+		<item>mx tile blue</item>
+		<item>mx medium blue</item>
+		<item>mx pastel blue</item>
+		<item>mx violet</item>
+		<item>mx pink</item>
+		<item>mx clear</item>
+	</string-array>
+
+	<integer-array name="array_colors_values">
+		<item>0x000000</item>
+		<item>0xFFFFFF</item>
+		<item>0xFFFFFF</item>
+		<item>0xE8E8E8</item>
+		<item>0xe4e8e8</item>
+		<item>0xafb5c7</item>
+		<item>0x9c9c9c</item>
+		<item>0x6b5a5a</item>
+		<item>0x595D60</item>
+		<item>0x212121</item>
+		<item>0x6a0e15</item>
+		<item>0xb30006</item>
+		<item>0xb52c20</item>
+		<item>0xf45c40</item>
+		<item>0xFFDEDC</item>
+		<item>0x8c6b6b</item>
+		<item>0x89351d</item>
+		<item>0x532115</item>
+		<item>0x330000</item>
+		<item>0x907450</item>
+		<item>0xdec69c</item>
+		<item>0xfeccb0</item>
+		<item>0xCC8062</item>
+		<item>0xE78B3E</item>
+		<item>0x774125</item>
+		<item>0xB3694E</item>
+		<item>0xE6881D</item>
+		<item>0xb35408</item>
+		<item>0xFF7E14</item>
+		<item>0xFFA531</item>
+		<item>0xF7BA30</item>
+		<item>0xf7ad63</item>
+		<item>0xE6C05D</item>
+		<item>0xf7d117</item>
+		<item>0xF3E055</item>
+		<item>0xffe383</item>
+		<item>0xEbEE8F</item>
+		<item>0xDFEEA5</item>
+		<item>0xBDC618</item>
+		<item>0xA6CA55</item>
+		<item>0x7C9051</item>
+		<item>0x2E5543</item>
+		<item>0x00642e</item>
+		<item>0x10cb31</item>
+		<item>0x62F58E</item>
+		<item>0xa5dbb5</item>
+		<item>0x76a290</item>
+		<item>0x008a80</item>
+		<item>0x31B5CA</item>
+		<item>0xb5d3d6</item>
+		<item>0x0CCFFF</item>
+		<item>0x143044</item>
+		<item>0x0057a6</item>
+		<item>0x3399FF</item>
+		<item>0x42C0FB</item>
+		<item>0x61afff</item>
+		<item>0x6BADD6</item>
+		<item>0x9FC3E9</item>
+		<item>0xB4D2E3</item>
+		<item>0x7DBFDD</item>
+		<item>0x5a7184</item>
+		<item>0x506cef</item>
+		<item>0x2032B0</item>
+		<item>0x3448a4</item>
+		<item>0x9391e4</item>
+		<item>0xC9CAE2</item>
+		<item>0x5f2683</item>
+		<item>0xa5499c</item>
+		<item>0xDA70D6</item>
+		<item>0xB5A5D5</item>
+		<item>0xCBA2C8</item>
+		<item>0xB57DA5</item>
+		<item>0xB52952</item>
+		<item>0xC87080</item>
+		<item>0xF785B1</item>
+		<item>0xFFBBFF</item>
+		<item>0xFFC0CB</item>
+		<item>0xFFE1FF</item>
+		<item>0xEEEEEE</item>
+		<item>0x939484</item>
+		<item>0x9C0010</item>
+		<item>0xFF4231</item>
+		<item>0xD78019</item>
+		<item>0xFFD700</item>
+		<item>0xEBF72D</item>
+		<item>0xC0F500</item>
+		<item>0x10Cb31</item>
+		<item>0x217625</item>
+		<item>0x00296B</item>
+		<item>0x7384A5</item>
+		<item>0x68BCC5</item>
+		<item>0xB7C8BF</item>
+		<item>0xB97AB1</item>
+		<item>0x8320B7</item>
+		<item>0xCE1d9b</item>
+		<item>0xFF8298</item>
+		<item>0xf1f2e1</item>
+		<item>0xDCDCDC</item>
+		<item>0x645a4c</item>
+		<item>0x544E4F</item>
+		<item>0x5C66A4</item>
+		<item>0x3CB371</item>
+		<item>0xaa4d8e</item>
+		<item>0xFFFFFF</item>
+		<item>0xD4D2CD</item>
+		<item>0xACB7C0</item>
+		<item>0x8D949C</item>
+		<item>0x666660</item>
+		<item>0x5686AE</item>
+		<item>0xE7AE5A</item>
+		<item>0xe79500</item>
+		<item>0xAD7118</item>
+		<item>0xC66921</item>
+		<item>0xC0C0C0</item>
+		<item>0xbdb573</item>
+		<item>0xB8860B</item>
+		<item>0xd4d3dd</item>
+		<item>0xd4d5c9</item>
+		<item>0xbdc6ad</item>
+		<item>0xb2adaa</item>
+		<item>0x3A2B82</item>
+		<item>0xab43c3</item>
+		<item>0x7C7E7C</item>
+		<item>0xAB9421</item>
+		<item>0x5F4E47</item>
+		<item>0x4A6363</item>
+		<item>0xFFFFFF</item>
+		<item>0xAfB5C7</item>
+		<item>0x9C9C9C</item>
+		<item>0x595D60</item>
+		<item>0x6B5A5A</item>
+		<item>0x000000</item>
+		<item>0x330000</item>
+		<item>0x5C5030</item>
+		<item>0x907450</item>
+		<item>0xDEC69C</item>
+		<item>0xB52C20</item>
+		<item>0xF45C40</item>
+		<item>0xF47B30</item>
+		<item>0xF7AD63</item>
+		<item>0xFFE371</item>
+		<item>0xFED557</item>
+		<item>0xBDC618</item>
+		<item>0x7DB538</item>
+		<item>0x7C9051</item>
+		<item>0x27867E</item>
+		<item>0x467083</item>
+		<item>0x0057A6</item>
+		<item>0x61AFFF</item>
+		<item>0x68AECE</item>
+		<item>0xBD7D85</item>
+		<item>0xF785B1</item>
+		<item>0xFFFFFF</item>
+	</integer-array>
+	<string-array name="array_componentList_GroupName">
+		<item name="regular_items">regular items</item>
+		<item name="extra_items">extra items</item>
+		<item name="counterparts">counterparts</item>
+		<item name="alternate_items">alternate items</item>
+	</string-array>
+</resources>

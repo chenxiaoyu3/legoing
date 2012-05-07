@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent">
+	<!-- Search window -->
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="vertical" android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:id="@+id/layout_DoSearch"
+		android:layout_marginTop="10dp">
+		<!-- <TextView android:text="@string/search_title_Search" android:layout_width="fill_parent" 
+			android:layout_height="wrap_content" /> -->
+		<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:orientation="vertical" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:stretchColumns="2">
+			<!-- Type -->
+			<TableRow>
+				<TextView android:layout_column="0" android:layout_width="20dp" />
+				<TextView android:layout_column="1"
+					style="@style/Style_Black_TextView_label" android:text="@string/search_label_Type" />
+				<Spinner android:layout_column="2" android:id="@+id/Spinner_Search_Types"
+					style="@style/Style_Black_Spinner" android:layout_width="80dp"
+					android:layout_height="wrap_content" />
+				<TextView android:layout_column="3" android:layout_width="20dp" />
+			</TableRow>
+			<!-- Year -->
+			<TableRow>
+				<TextView android:layout_column="1" android:text="@string/search_label_Year"
+					style="@style/Style_Black_TextView_label" />
+				<Spinner android:layout_column="2" android:id="@+id/Spinner_Search_Years"
+					style="@style/Style_Black_Spinner" android:layout_width="80dp"
+					android:layout_height="wrap_content" />
+			</TableRow>
+			<!-- Item No -->
+			<TableRow>
+				<TextView android:layout_column="1"
+					android:text="@string/search_label_ItemNo" style="@style/Style_Black_TextView_label" />
+				<EditText android:layout_column="2"
+					android:inputType="text"
+					android:id="@+id/editText_Search_ItemNo" style="@style/Style_Black_editText"
+					android:layout_width="80dp" android:layout_height="wrap_content">
+				</EditText>
+			</TableRow>
+			<!-- Name -->
+			<TableRow>
+				<TextView android:layout_column="1" android:text="@string/search_label_Name"
+					style="@style/Style_Black_TextView_label"></TextView>
+				<EditText android:layout_column="2" android:id="@+id/editText_Search_Name"
+					android:inputType="text"
+					style="@style/Style_Black_editText" android:layout_width="30dp"
+					android:layout_height="wrap_content">
+				</EditText>
+			</TableRow>
+		</TableLayout>
+		<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:orientation="vertical" android:layout_width="fill_parent"
+			android:layout_height="wrap_content">
+			<ImageButton android:id="@+id/imageButton_Search_DoSearch"
+				android:src="@drawable/search" android:layout_alignParentRight="true"
+				android:layout_alignParentTop="true" android:layout_marginTop="20dp"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:background="@android:color/transparent" />
+
+			<ProgressBar android:id="@+id/progressBar_Search_loading"
+				android:layout_alignParentLeft="true"
+				android:layout_alignParentBottom="true" android:layout_margin="20dp"
+				android:layout_width="wrap_content" android:layout_height="wrap_content" />
+
+		</RelativeLayout>
+
+
+
+	</LinearLayout>
+	<!-- result window -->
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:Legoing="http://schemas.android.com/apk/res/com.Legoing"
+		android:id="@+id/layout_SearchResult" android:orientation="vertical"
+		android:layout_width="match_parent" android:layout_height="match_parent">
+		<ListView android:id="@+id/LV_SearchResults"
+			android:layout_width="fill_parent" android:layout_height="wrap_content" android:cacheColorHint="#00000000"></ListView>
+	</LinearLayout>
+</FrameLayout>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent" android:layout_height="match_parent"
+	android:background="@drawable/main_back">
+
+	<com.Legoing.UserControls.ActionBar
+		android:id="@+id/actionBar_itemInfo"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" />
+
+	<RelativeLayout
+		android:layout_width="match_parent" android:layout_height="wrap_content">
+		
+		<ImageView
+			android:id="@+id/imageView_ItemPic"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_centerInParent="true"
+			android:scaleType="fitCenter"
+			android:adjustViewBounds="true"
+			android:src="@drawable/lego_default"
+			/>
+		<ProgressBar 
+			android:id="@+id/progressBar_legoItemInfo_loadPic"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_centerInParent="true"
+			style="@android:style/Widget.ProgressBar"
+			/>
+		
+		<ImageButton 
+			android:id="@+id/imageButton_ItemInfo_AddFavorite"
+			android:layout_alignParentRight="true" android:layout_alignParentTop="true" 
+			
+			style="@style/Style_Black_ImageButton"
+			/>
+	</RelativeLayout>
+	<!--  
+	<TextView
+		android:id="@+id/textView_itemInfo_ItemName"
+		style="@style/style_TextView_Title"
+		android:layout_gravity="center_horizontal"
+		android:layout_margin="10dp"
+		android:text="NAME??????" />
+	-->
+	<RatingBar 
+		android:id="@+id/ratingBar_legoItemInfo"
+		android:layout_width="wrap_content" android:layout_height="40dp"
+		android:progressDrawable="@drawable/rating_bar_list"
+		android:layout_gravity="center_horizontal"
+		android:visibility="gone"
+		/>
+	<LinearLayout
+		android:layout_height="wrap_content" android:layout_width="wrap_content"
+		android:orientation="horizontal">
+		<TextView
+			style="@style/Style_Black_TextView_label"
+			android:text="@string/label_itemInfo_Year" />
+		<TextView
+			android:id="@+id/textView_itemInfo_Year" 
+			style="@style/style_lableValue"
+			android:text="2001?" />
+		<TextView style="@style/Style_Black_TextView_label" android:text="@string/label_itemInfo_Catalog" />
+		<TextView android:id="@+id/textView_itemInfo_Catalog" style="@style/style_lableValue"
+			android:text="tech?" />
+	</LinearLayout>
+	<LinearLayout
+		android:layout_height="wrap_content" android:layout_width="wrap_content"
+		android:orientation="horizontal">
+		<TextView
+			style="@style/Style_Black_TextView_label"
+			android:text="@string/label_itemInfo_PartsNum" 
+			/>
+		<TextView
+			android:id="@+id/textView_itemInfo_Parts" style="@style/style_lableValue"
+			android:text="0"
+			/>
+		<TextView 
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_marginLeft="20dp" />
+		<TextView style="@style/Style_Black_TextView_label" android:text="@string/label_itemInfo_Minifigs" />
+		<TextView android:id="@+id/textView_itemInfo_Minifigs" style="@style/style_lableValue"
+			android:text="0" />
+	</LinearLayout>
+	<!-- <LinearLayout android:layout_height="wrap_content" android:layout_width="wrap_content" 
+		android:orientation="horizontal"> <TextView style="@style/style_label" android:text="@string/label_itemInfo_Price" 
+		/> <TextView android:id="@+id/textView_itemInfo_Price" style="@style/style_lableValue" 
+		android:text="$20?" /> </LinearLayout> -->
+<!--  
+	<LinearLayout android:layout_height="wrap_content"
+		android:layout_width="wrap_content" android:orientation="horizontal">
+		<TextView style="@style/Style_Black_TextView_label" android:text="@string/label_itemInfo_Catalog" />
+		<TextView android:id="@+id/textView_itemInfo_Catalog" style="@style/style_lableValue"
+			android:text="tech?" />
+	</LinearLayout>
+-->
+	<ImageView style="@style/Style_Black_Divider"/>
+	<LinearLayout 
+		android:layout_height="wrap_content" android:layout_width="match_parent" 
+		android:orientation="horizontal">
+		<include android:id="@+id/layout_legoItemInfo_pageComponent" layout="@layout/pageview_title"/>
+		<include android:id="@+id/layout_legoItemInfo_pageComment" layout="@layout/pageview_title"/>
+	</LinearLayout>
+	<com.Legoing.UserControls.PageView
+		android:id="@+id/pageView_legoItemInfo"
+		android:layout_height="match_parent" android:layout_width="match_parent">
+		<RelativeLayout android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:orientation="horizontal">
+			<TextView 
+				android:id="@+id/textView_legoItemInfo_tip" 
+				style="@style/Style_Black_TextView_valueThemeColor" 
+				android:layout_margin="10dp"
+				/>
+			<ExpandableListView 
+				android:layout_height="wrap_content" android:layout_width="match_parent"
+				android:id="@+id/expandableListView_ItemInfo_0"
+				android:fastScrollEnabled="true"
+				android:cacheColorHint="#00000000">
+			</ExpandableListView>
+			<ProgressBar android:id="@+id/progressBar_legoItemInfo_loadComponent"
+				android:layout_width="wrap_content" android:layout_height="wrap_content" />
+		</RelativeLayout>
+		<LinearLayout 
+			android:layout_width="match_parent" android:layout_height="match_parent">
+			<ListView 
+				android:id="@+id/listView_legoItemInfo_comment"
+				android:layout_height="match_parent" android:layout_width="match_parent"
+				android:cacheColorHint="#00000000"
+				android:fastScrollEnabled="true"></ListView>
+		</LinearLayout>
+	</com.Legoing.UserControls.PageView>
+</LinearLayout>

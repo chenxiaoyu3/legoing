@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="wrap_content"
+	android:layout_height="40dp" android:background="@drawable/title_back_level2_with_edge"
+	>
+	<!--
+	<TextView android:layout_width="10dp" android:layout_height="0dp"
+		android:id="@+id/textView_expandableListTitle_emptyTop" />
+	  
+	<ImageView android:src="@drawable/title_back_level2_with_edge"
+		android:id="@+id/ImageView_expandableListTitle_TitleBack"
+		android:layout_below="@+id/textView_expandableListTitle_emptyTop"
+		android:layout_width="match_parent" android:layout_height="40dp"
+		android:scaleType="fitXY"
+		
+		 />
+		 -->
+	<TextView android:id="@+id/textView_ULayout_expandableListTitle_titleText"
+		android:layout_height="wrap_content" android:layout_alignParentLeft="true"
+		android:layout_width="wrap_content" android:layout_centerVertical="true"
+		android:layout_marginLeft="50dp" android:textColor="@android:color/white"
+		android:text="xxx" />
+	<TextView android:id="@+id/textView_ULayout_expandableListTitle_titleText2"
+		android:layout_height="wrap_content"
+		android:layout_toRightOf="@+id/textView_ULayout_expandableListTitle_titleText"
+		android:layout_width="wrap_content" android:layout_centerVertical="true"
+		android:layout_marginLeft="10dp" />
+</RelativeLayout>

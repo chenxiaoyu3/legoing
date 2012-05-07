@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:legoing="http://schemas.android.com/apk/res/com.Legoing"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical" >
+	<com.Legoing.UserControls.ActionBar 
+		
+		android:id="@+id/actionBar_findMiss" 
+		android:layout_width="match_parent" android:layout_height="wrap_content"
+		legoing:titleText="@string/findMiss_title"  />
+	<RelativeLayout 
+		android:layout_width="match_parent" android:layout_height="wrap_content">
+		<com.Legoing.UserControls.UCtrl_LegoListItem 
+			android:id="@+id/uCtrl_LegoListItem"
+			android:layout_width="match_parent" android:layout_height="wrap_content"/>
+		<ImageButton 
+			android:id="@+id/imageButton_findMiss_setting"
+			android:src="@drawable/settings"
+			style="@style/Style_Black_ImageButton"
+			android:layout_alignParentRight="true" android:layout_alignParentTop="true"
+			android:layout_marginTop="8dp" android:layout_marginRight="8dp"/>		
+	</RelativeLayout>
+		<ImageView style="@style/Style_Black_Divider" android:contentDescription="@string/Desc"/>
+	<TableLayout
+		android:id="@+id/layout_findMiss_showSelectWin"
+		android:layout_width="match_parent" android:layout_height="wrap_content"
+		android:orientation="horizontal" android:stretchColumns="2"
+		android:clickable="true" android:focusable="true" android:focusableInTouchMode="true"
+		android:background="@drawable/selector_large_button_bg"
+		>
+		<TableRow >
+			  
+			<TextView android:id="@+id/textView_findMiss_selCnt" 
+				style="@style/Style_Black_TextView_labelValueGreen"
+				android:layout_marginLeft="18dp"
+				android:layout_gravity="center_vertical"
+				android:clickable="false"
+				android:text="0"
+				/>
+			
+			<TextView style="@style/Style_Black_TextView_labelValueWhite"
+				android:text="@string/findMiss_selected"
+				android:layout_gravity="center_vertical"
+				android:layout_marginLeft="8dp"/>
+			<TextView 
+				android:layout_height="wrap_content" android:layout_width="wrap_content"
+				/>
+				
+			<ImageView
+				android:id="@+id/button_findMiss_Sel"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginRight="8dp"
+				android:src="@drawable/arrow_right"
+				android:contentDescription="@string/Desc"
+				/>
+			
+		</TableRow>
+	</TableLayout>
+	<ImageView style="@style/Style_Black_Divider"/>
+	<RelativeLayout 
+		android:layout_height="match_parent" android:layout_width="match_parent">
+		<ListView android:id="@+id/listView_findMiss"
+			android:layout_height="match_parent" android:layout_width="match_parent"
+			android:fastScrollEnabled="true"
+			/>
+		<ProgressBar android:id="@+id/progressBar_findMiss"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_margin="8dp"
+			style="@android:style/Widget.ProgressBar.Large"
+			android:layout_alignParentLeft="true" android:layout_alignParentBottom="true"
+			android:visibility="invisible"/>
+		
+	</RelativeLayout>
+	
+	
+
+</LinearLayout>

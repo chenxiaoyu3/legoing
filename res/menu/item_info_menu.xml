@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+	
+	<item
+		android:id="@+id/menuItem_addToMyLego"
+		android:icon="@drawable/menu_add_my_lego"
+		android:title="@string/menu_addToMyLego"/>
+	<item 
+		android:id="@+id/menuItem_comment"
+		android:icon="@drawable/menu_add_comment"
+		android:title="@string/menu_addComment"/>
+	<item
+		android:id="@+id/menuItem_findMiss"
+		android:icon="@drawable/menu_find_miss"
+		android:title="@string/menu_findMiss"/>
+</menu>
