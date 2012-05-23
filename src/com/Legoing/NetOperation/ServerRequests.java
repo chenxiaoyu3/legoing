@@ -221,3 +221,20 @@ class Request_TopSuggest extends ServerRequest{
     }
     
 }
+
+class Request_BarcodeSearch extends ServerRequest{
+    public static final String URLPATH = "request_item_search_barcode.php";
+    public static final int RET_FAILED = -2;
+    String code;
+    public Request_BarcodeSearch(String code)
+    {
+        this.code = code;
+    }
+    @Override
+    public List<NameValuePair> toParam() {
+        // TODO , Xiaoyu Chen<chenxiaoyu3@gmail.com>, May 8, 2012 8:04:23 PM
+        List<NameValuePair> retList = new ArrayList<NameValuePair>(4);
+        retList.add(new DefaultNameValuePair("bar", code));
+        return retList;
+    }
+}

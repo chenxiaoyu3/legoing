@@ -794,7 +794,7 @@ public class NetOperation {
 	            obj = JSON.parseObject(paramObj.value, CommuObj.class);
 	            switch (obj.ret) {
 	                case CommuObj.RET_SUCCESS:
-	                    List<Set> sets = JSON.parseArray(((JSONObject) obj.value).toJSONString(),Set.class);
+	                    List<Set> sets = JSON.parseArray( ((JSONArray)obj.value).toJSONString(),Set.class);
 	                    result.value = sets;
 	                    ret = 0;
 	                    break;
@@ -815,6 +815,57 @@ public class NetOperation {
 	    
 	}
 	
+	public int requestBarcodeSearch(String code, ParamObj<List<List>> result) {
+
+	    Request_BarcodeSearch request = new Request_BarcodeSearch(code);
+
+        ParamObj<String> paramObj = new DefaultParamObj<String>();
+        int retValue = sendPost2(URL_SERVER_HOME + Request_BarcodeSearch.URLPATH, request.toParam(), paramObj);
+
+        result.value = new ArrayList<List>(3);
+        if (retValue == 0) {
+            CommuObj obj = null;
+            try {
+                obj = JSON.parseObject(paramObj.value, CommuObj.class);
+
+            } catch (Exception e) {
+                // TODO: handle exception
+                e.printStackTrace();
+                return CODE_INNER_ERROR;
+            }
+
+            if (obj.ret == CommuObj.RET_SUCCESS) {
+                List<Object> searchResult = JSON.parseArray(((JSONArray) obj.value).toJSONString());
+
+                List<Set> result0;
+                List<Part> result1;
+                List<Minifig> result2;
+
+                try {
+                    result0 = JSON.parseArray(((JSONArray) searchResult.get(0)).toJSONString(), Set.class);
+                    result.value.add(result0);
+
+                    result2 = JSON.parseArray(((JSONArray) searchResult.get(1)).toJSONString(), Minifig.class);
+                    result.value.add(result2);
+
+                    result1 = JSON.parseArray(((JSONArray) searchResult.get(2)).toJSONString(), Part.class);
+                    result.value.add(result1);
+                } catch (Exception e) {
+                    // _TODO: handle exception
+                    return CODE_INNER_ERROR;
+                }
+
+            } else if(obj.ret == Request_BarcodeSearch.RET_FAILED){
+                return -1;
+            } else {
+                return CODE_UNKOWN_RET;
+            }
+            return obj.ret;
+        } else {
+            return CODE_NET_FAILED;
+        }
+
+    }
 	public void handleReturnValue(int ret)
 	{
 		switch (ret) {

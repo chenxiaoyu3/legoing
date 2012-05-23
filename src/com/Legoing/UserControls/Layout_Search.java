@@ -116,7 +116,7 @@ public class Layout_Search extends TableLayout {
 		handlerUI = new Handler() {
 			@Override
 			public void handleMessage(Message msg) {
-				// _TODO , Chen Xiaoyu Cxy, 2011-12-16 ����5:08:27
+				// _TODO , Chen Xiaoyu Cxy, 2011-12-16  5:08:27
 				switch (msg.what) {
 				case MSG_SEARCH_FINISHED:
 					afterSearch();
@@ -139,7 +139,7 @@ public class Layout_Search extends TableLayout {
 
 		@Override
 		public void onClick(View v) {
-			// _TODO , Cxy, 2011-10-30 ����9:09:53
+			// _TODO , Cxy, 2011-10-30  9:09:53
 			doSearch();
 		}
 	};
@@ -164,6 +164,12 @@ public class Layout_Search extends TableLayout {
 	void initialTab_Search() {
 
 		imageButton_Search.setOnClickListener(searchOnClickListener);
+	}
+	public void setSearchResult(List<List> result)
+	{
+	    this.serverRet = result;
+	    showSearchResult();
+        jumpPage(PAGE_RESULTS);
 	}
 
 	void afterSearch() {

@@ -4,6 +4,8 @@ import com.Legoing.R;
 import com.Legoing.StaticOverall;
 import com.Legoing.ThreadsMgr;
 import com.Legoing.ItemDef.LegoItem;
+import com.Legoing.webimage.ImageRequest;
+import com.Legoing.webimage.WebImageLoader;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -107,25 +109,54 @@ public class UCtrl_LegoListItem extends TableLayout {
 
 	public void loadPic() {
 		progressBar_PicLoading.setVisibility(View.VISIBLE);
-		if (threadImage == null) {
-			threadImage = ThreadsMgr.getThreadToRun(new Runnable() {
+		WebImageLoader.instance(context).requestImage(value.getImgLink(), new ImageRequest.Observer(){
 
-				@Override
-				public void run() {
-					// TODO , Chen Xiaoyu Cxy, 2011-12-29 ����8:53:19
-					Bitmap bit = StaticOverall.imageMagager.getNormalImage(value);
+            @Override
+            public void onImageLoaded(String url, Bitmap bitmap) {
+                // _TODO , Xiaoyu Chen<chenxiaoyu3@gmail.com>, May 9, 2012 3:50:36 PM
+                if (url.equals(value.getImgLink())) {
+                    progressBar_PicLoading.setVisibility(View.INVISIBLE);
+                    imageView.setVisibility(View.VISIBLE);
+                    imageView.setImageBitmap(bitmap);
+                }
+                
+            }
 
-					Message msg = new Message();
-					msg.what = MSG_PIC_DOWNLOADED;
-					msg.obj = bit;
-					handlerUI.sendMessage(msg);
-					threadImage = null;
+            @Override
+            public void onImageLoadFailed(String url) {
+                // _TODO , Xiaoyu Chen<chenxiaoyu3@gmail.com>, May 9, 2012 3:50:36 PM
+                if (url.equals(value.getImgLink())) {
+                    progressBar_PicLoading.setVisibility(View.INVISIBLE);
+                    imageView.setVisibility(View.VISIBLE);
+                }
+            }});
+//		if (threadImage == null) {
+//			threadImage = ThreadsMgr.getThreadToRun(new Runnable() {
+//
+//				@Override
+//				public void run() {
+//					// TODO , Chen Xiaoyu Cxy, 2011-12-29 v8:53:19
+//					Bitmap bit = StaticOverall.imageMagager.getNormalImage(value);
+//
+//					Message msg = new Message();
+//					msg.what = MSG_PIC_DOWNLOADED;
+//					msg.obj = bit;
+//					handlerUI.sendMessage(msg);
+//					threadImage = null;
+//
+//				}
+//			}, "loadPic:" + value.getNo());
+//			threadImage.start();
+//		}
 
-				}
-			}, "loadPic:" + value.getNo());
-			threadImage.start();
-		}
-
+	}
+	public void recycle()
+	{
+//	    if (threadImage != null) {
+//            threadImage.destroy();
+//            threadImage = null;
+//        }
+	    imageView.setImageBitmap(null);
 	}
 
 }

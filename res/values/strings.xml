@@ -28,6 +28,8 @@
     <string name="itemInfo_Detail">Detail</string>
     <string name="itemInfo_Comment">Comment</string>
     <string name="itemInfo_addCommentSuccess">Comment success.</string>
+    <string name="home_topSuggestToday">Today\'s TOP Suggestion</string>
+    <string name="barcode_searchFailed">Can\'t find this barcode!</string>
     
     <string name="label_addToMyLego_Quantity">Quantity</string>
     <string name="label_addToMyLego_Color">Color</string>

@@ -1,8 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
   xmlns:android="http://schemas.android.com/apk/res/android"
   android:orientation="vertical"
   android:layout_width="match_parent"
   android:layout_height="match_parent">
+  <ProgressBar 
+  	android:id="@+id/progressBar_home"
+  	android:layout_height="wrap_content"
+  	android:layout_width="wrap_content"
+  	style="@android:style/Widget.ProgressBar.Large"
+  	android:layout_centerInParent="true"/>
+  <ScrollView 
+  	android:layout_height="match_parent" android:layout_width="match_parent">
+  	
+  
+	  <LinearLayout 
+	  	android:layout_height="wrap_content" android:layout_width="match_parent"
+	  	android:orientation="vertical">
+	  	<TextView 
+	  		style="@style/Style_Black_TextView_label"
+	  		android:text="@string/home_topSuggestToday"
+	  		android:layout_marginTop="10dp"/>
+	  	<ImageView 
+	  		android:id="@+id/imageView_home"
+	  		android:layout_width="wrap_content"
+	  		android:layout_height="wrap_content"
+	  		android:layout_gravity="center_horizontal"
+	  		android:src="@drawable/lego_default"
+	  		android:adjustViewBounds="true"/>
+	  	<TextView 
+	  		android:id="@+id/textView_home_topSetName"
+	  		style="@style/Style_Black_TextView_labelThemeColor"
+	  		android:layout_gravity="center_horizontal"
+	  		android:text="xxx"/>
+	  	<ImageView style="@style/Style_Black_Divider"/>
+	  	<com.Legoing.UserControls.UCtrl_LegoListItem
+	  		android:id="@+id/LegoListItem_home_1"
+	  		android:layout_height="wrap_content" android:layout_width="match_parent"/>
+	  	<com.Legoing.UserControls.UCtrl_LegoListItem
+	  		android:id="@+id/LegoListItem_home_2"
+	  		android:layout_height="wrap_content" android:layout_width="match_parent"/>
+	  	<com.Legoing.UserControls.UCtrl_LegoListItem
+	  		android:id="@+id/LegoListItem_home_3"
+	  		android:layout_height="wrap_content" android:layout_width="match_parent"/>
+	  	<com.Legoing.UserControls.UCtrl_LegoListItem
+	  		android:id="@+id/LegoListItem_home_4"
+	  		android:layout_height="wrap_content" android:layout_width="match_parent"/>
+	  	
+	  </LinearLayout>
+  </ScrollView>
     
-</LinearLayout>
+</RelativeLayout>

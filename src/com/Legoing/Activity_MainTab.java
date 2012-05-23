@@ -3,6 +3,8 @@ package com.Legoing;
 import com.Legoing.NetOperation.NetOperation;
 import com.Legoing.UserControls.ActionBar;
 import com.Legoing.UserControls.Layout_MyLegoing;
+import com.Legoing.UserControls.Layout_Search;
+import com.Legoing.zxing.CaptureActivity;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -10,6 +12,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -31,11 +34,14 @@ import android.widget.TabHost;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.List;
+
 public class Activity_MainTab extends Activity_Base {
 
 	TabHost tabHost;
 	ActionBar actionBar;
 	Layout_MyLegoing mTab_MyLego;
+	Layout_Search mTab_Search;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO , Cxy, 2011-10-24 ����6:40:16
@@ -59,6 +65,7 @@ public class Activity_MainTab extends Activity_Base {
 		tabHost = (TabHost) findViewById(R.id.tabHost);
 		actionBar = (ActionBar)findViewById(R.id.actionBar_mainTab);
 		mTab_MyLego = (Layout_MyLegoing)findViewById(R.id.layout_MyLegoing);
+		mTab_Search = (Layout_Search)findViewById(R.id.layout_Search);
 		//layout_Account = findViewById(R.id.relativeLayout_Account);
 		//textView_Account = (TextView)findViewById(R.id.textView_mainTab_Account);
 	}
@@ -177,7 +184,20 @@ public class Activity_MainTab extends Activity_Base {
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		// TODO , Cxy, 2011-11-25 3:09:40
-		showNetState();
+		
+		switch (requestCode) {
+            case REQ_BARCODESCAN:
+                if (resultCode == RESULT_OK) {
+                    String dat = data.getStringExtra(CaptureActivity.EXTRA_RESULT);
+                    Toast.makeText(this, dat, Toast.LENGTH_LONG).show();
+                    new Async_RequestBarcodeSearch().execute(dat);
+                }
+                break;
+
+            default:
+                showNetState();
+                break;
+        }
 		super.onActivityResult(requestCode, resultCode, data);
 	}
 
@@ -234,7 +254,43 @@ public class Activity_MainTab extends Activity_Base {
 	{
 	    return mTab_MyLego;
 	}
-	
+	public Layout_Search getTab_search()
+	{
+	    return mTab_Search;
+	}
+	public void jumpTab(int index)
+	{
+	    tabHost.setCurrentTab(index);
+	}
+	class Async_RequestBarcodeSearch extends AsyncTask<Object, Object, Object>{
+
+        @Override
+        protected Object doInBackground(Object... params) {
+            // TODO , Xiaoyu Chen<chenxiaoyu3@gmail.com>, May 8, 2012 7:56:55 PM
+            ParamObj<List<List>> paramObj = new DefaultParamObj<List<List>>();
+            int serverRet = StaticOverall.netOperation.requestBarcodeSearch((String)params[0], paramObj);
+            publishProgress(serverRet, paramObj.value);
+            return serverRet;
+        }
+        @Override
+        protected void onProgressUpdate(Object... values) {
+            // _TODO , Xiaoyu Chen<chenxiaoyu3@gmail.com>, May 8, 2012 8:09:33 PM
+            switch ((Integer)values[0]) {
+                case 0:
+                    jumpTab(1);
+                    mTab_Search.setSearchResult((List<List>)values[1]); 
+                    break;
+                case -1:
+                    Toast.makeText(Activity_MainTab.this, R.string.barcode_searchFailed, Toast.LENGTH_LONG).show();
+                    break;
+                default:
+                    StaticOverall.netOperation.handleReturnValue((Integer)values[0]);
+                    break;
+            }
+            super.onProgressUpdate(values);
+        }
+	    
+	}
 	private static void log(String text)
 	{
 	    android.util.Log.d(TAG, text);
