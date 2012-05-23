@@ -139,7 +139,6 @@ public class Layout_Search extends TableLayout {
 
 		@Override
 		public void onClick(View v) {
-			// _TODO , Cxy, 2011-10-30  9:09:53
 			doSearch();
 		}
 	};

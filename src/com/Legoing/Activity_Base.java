@@ -97,7 +97,17 @@ public class Activity_Base extends Activity{
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         // TODO , Xiaoyu Chen<chenxiaoyu3@gmail.com>, Apr 24, 2012 12:50:34 PM
-        
+        switch (requestCode) {
+            case REQ_BARCODESCAN:
+                if (resultCode == RESULT_OK) {
+                    String dat = data.getStringExtra(CaptureActivity.EXTRA_RESULT);
+                    Toast.makeText(this, dat, Toast.LENGTH_LONG).show();
+                }
+                break;
+
+            default:
+                break;
+        }
         super.onActivityResult(requestCode, resultCode, data);
     }
     public void shutdownConfirm() {

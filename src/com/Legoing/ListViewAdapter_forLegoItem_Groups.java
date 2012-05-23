@@ -47,13 +47,11 @@ public class ListViewAdapter_forLegoItem_Groups extends BaseAdapter {
 
 	@Override
 	public int getCount() {
-		// TODO , Cxy, 2011-10-29 ����2:55:21
 		return allItems.size();
 	}
 
 	@Override
 	public Object getItem(int arg0) {
-		// TODO , Cxy, 2011-10-29 ����2:55:22
 //		if (arg0 == 0)// Tag:set
 //		{
 //			arg0++;
@@ -69,7 +67,6 @@ public class ListViewAdapter_forLegoItem_Groups extends BaseAdapter {
 
 	@Override
 	public long getItemId(int arg0) {
-		// TODO , Cxy, 2011-10-29 ����2:55:22
 		return arg0;
 	}
 
@@ -127,7 +124,6 @@ public class ListViewAdapter_forLegoItem_Groups extends BaseAdapter {
 	}
 	@Override
 	public boolean isEnabled(int position) {
-		// TODO , Chen Xiaoyu Cxy, 2011-11-24 ����9:52:40
 		return !(position == 0 || position == sets.size()+1 || position == sets.size()+1+minifigs.size()+1);
 	}
 }

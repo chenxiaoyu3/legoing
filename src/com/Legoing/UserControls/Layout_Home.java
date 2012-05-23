@@ -25,20 +25,30 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Layout_Home extends RelativeLayout {
+import com.Legoing.R;
 
-	Context context;
-	ProgressBar progressBar;
-	ImageView imageView_TopItemImg;
-	TextView textView_TopItemName;
-	List<UCtrl_LegoListItem> suggestItemsList;
-	LegoItem topItem;
+import android.content.Context;
+import android.util.AttributeSet;
+import android.view.KeyEvent;
+import android.view.LayoutInflater;
+import android.widget.LinearLayout;
+
+
+public class Layout_Home extends LinearLayout {
+
+    Context context;
+    ProgressBar progressBar;
+    ImageView imageView_TopItemImg;
+    TextView textView_TopItemName;
+    List<UCtrl_LegoListItem> suggestItemsList;
+    LegoItem topItem;
+
 	public Layout_Home(Context context, AttributeSet attrs) {
 		super(context, attrs);
-		// TODO , Cxy, 2011-10-30  3:38:39
+		// TODO , Cxy, 2011-10-30 ����3:38:39
 		this.context = context;
 		LayoutInflater.from(context).inflate(R.layout.home, this, true);
-		
+
 		initial_ID();
 		initial();
 
@@ -89,6 +99,8 @@ public class Layout_Home extends RelativeLayout {
 	    suggestItemsList.get(2).setValue(items.get(3));
 	    suggestItemsList.get(3).setValue(items.get(4));
 	}
+
+	
 	
 	
 	@Override

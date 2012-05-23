@@ -5,7 +5,6 @@ import com.Legoing.R;
 import com.Legoing.StaticOverall;
 import com.Legoing.Model.UserSignStateChangedListener;
 
-import android.R.integer;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -49,7 +48,6 @@ public class ActionBar extends RelativeLayout implements UserSignStateChangedLis
 		if (defTitle != null) {
             setTitle(defTitle);
         }
-		       int i = Toast.LENGTH_LONG;
 		initial();
 	}
 	

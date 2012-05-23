@@ -36,6 +36,7 @@ import android.widget.Toast;
 
 import java.util.List;
 
+
 public class Activity_MainTab extends Activity_Base {
 
 	TabHost tabHost;
@@ -184,7 +185,6 @@ public class Activity_MainTab extends Activity_Base {
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		// TODO , Cxy, 2011-11-25 3:09:40
-		
 		switch (requestCode) {
             case REQ_BARCODESCAN:
                 if (resultCode == RESULT_OK) {
@@ -198,6 +198,7 @@ public class Activity_MainTab extends Activity_Base {
                 showNetState();
                 break;
         }
+		showNetState();
 		super.onActivityResult(requestCode, resultCode, data);
 	}
 

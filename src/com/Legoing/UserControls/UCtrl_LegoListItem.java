@@ -157,6 +157,25 @@ public class UCtrl_LegoListItem extends TableLayout {
 //            threadImage = null;
 //        }
 	    imageView.setImageBitmap(null);
+		if (threadImage == null) {
+			threadImage = ThreadsMgr.getThreadToRun(new Runnable() {
+
+				@Override
+				public void run() {
+					// TODO , Chen Xiaoyu Cxy, 2011-12-29 ����8:53:19
+					Bitmap bit = StaticOverall.imageMagager.getNormalImage(value);
+
+					Message msg = new Message();
+					msg.what = MSG_PIC_DOWNLOADED;
+					msg.obj = bit;
+					handlerUI.sendMessage(msg);
+					threadImage = null;
+
+				}
+			}, "loadPic:" + value.getNo());
+			threadImage.start();
+		}
+
 	}
 
 }
